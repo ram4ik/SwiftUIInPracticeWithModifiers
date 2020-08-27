@@ -14,13 +14,10 @@ struct ContentView: View {
     
     var body: some View {
         Stepper(value: $value, in: range) {
-            if value > 0 {
-                Text("Value: \(value)")
-                    .foregroundColor(.green)
-            } else {
-                Text("Value: \(value)")
-                    .foregroundColor(.red)
-            }
+            
+            Text("Value: \(value)")
+                .foregroundColor(value > 0 ? .green : .red)
+        
         }.padding()
     }
 }
